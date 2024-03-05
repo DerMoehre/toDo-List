@@ -1,3 +1,7 @@
+* {
+    font-family: 'Kode Mono';
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -7,10 +11,20 @@ body {
     --color-gray: #EEEEEE;
 
     background-color: var(--color-background);
+
 }
 
 p {
     color: var(--color-gray);
+}
+
+.title_card, .description_card {
+    color: var(--color-background);
+}
+
+.title_card {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .main_container {
@@ -52,7 +66,6 @@ nav {
 }
 
 .content_container {
-    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -63,4 +76,29 @@ nav {
     align-items: stretch;
     justify-content: center;
     gap: 16px;
+}
+
+.toDo_container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.toDo_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-break: break-word;
+    max-width: 300px;
+    border-radius: 16px;
+    padding: 20px;
+    background-color: var(--color-gray);
+    color: var(--color-background);
+}
+
+.toDo_card:hover {
+    border-left: 8px solid var(--color-blue);
 }

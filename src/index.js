@@ -1,4 +1,5 @@
 import './style.css';
+import './fonts.css';
 
 import { generateEmptyToDoHtml } from './templates/emptyToDo';
 
@@ -12,4 +13,4 @@ function main() {
     renderEmptyToDoHtml();
 }
 
-main();
+//main();
