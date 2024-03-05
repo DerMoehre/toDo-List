@@ -1,0 +1,1 @@
+import"./style.css";import{generateEmptyToDoHtml}from"./templates/emptyToDo";function renderEmptyToDoHtml(){let t=document.querySelector(".content_container");t.innerHTML="",t.innerHTML+=generateEmptyToDoHtml()}function main(){renderEmptyToDoHtml()}main();
