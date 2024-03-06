@@ -1,1 +1,1 @@
-function generateEmptyToDoHtml(){return'\n    <div class="empty_toDo">\n        <button class="nav_button large">Add ToDo</button>\n        <button class="nav_button large">Add Project</button>\n    </div>\n    '}export{generateEmptyToDoHtml};
+function generateEmptyToDoHtml(){return'\n    <div class="empty_toDo">\n        <button class="nav_button large" id="nav_button_addItem">Add ToDo</button>\n        <button class="nav_button large" id="nav_button_addProject">Add Project</button>\n    </div>\n    '}export{generateEmptyToDoHtml};

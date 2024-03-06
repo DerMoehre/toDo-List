@@ -38,6 +38,7 @@ p {
     align-items: center;
     width: 200px;
     height: 100vh;
+    padding: 0px 15px;
     background-color: var(--color-dark-gray);
 }
 
@@ -50,10 +51,16 @@ nav {
 
 .nav_button {
     border: none;
+    cursor: pointer;
     font-size: 16px;
     color: var(--color-gray);
     background-color: var(--color-dark-gray);
     border-radius: 8px;
+}
+
+.active {
+    color: var(--color-background);
+    background-color: var(--color-blue); 
 }
 
 .nav_button:hover {
@@ -68,6 +75,7 @@ nav {
 .content_container {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .empty_toDo {
@@ -82,6 +90,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    align-content: baseline;
     padding: 20px;
     gap: 16px;
     flex-wrap: wrap;
@@ -93,6 +102,7 @@ nav {
     align-items: center;
     word-break: break-word;
     max-width: 300px;
+    min-width: 180px;
     border-radius: 16px;
     padding: 20px;
     background-color: var(--color-gray);
@@ -101,4 +111,5 @@ nav {
 
 .toDo_card:hover {
     border-left: 8px solid var(--color-blue);
+    transition: 0.2s;
 }
