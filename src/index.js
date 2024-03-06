@@ -1,15 +1,11 @@
 import './style.css';
 import './fonts.css';
 
-import { generateEmptyToDoHtml } from './templates/emptyToDo';
+import { renderEmptyToDoHtml } from './templates/emptyToDo';
 import { renderToDoCard, generateOverviewToDoHtml, generateToDoCardHtml } from './templates/toDoOverview';
 import { myToDos, ToDoCard } from './templates/toDoCard';
 
-function renderEmptyToDoHtml () {
-    let content = document.querySelector('.content_container');
-    content.innerHTML = '';
-    content.innerHTML += generateEmptyToDoHtml();
-}
+
 
 function main() {
     if (myToDos.length < 1) {
@@ -19,7 +15,6 @@ function main() {
         renderToDoCard();
     }
     
-    console.log(myToDos);
 }
 
 main();

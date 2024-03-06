@@ -5,7 +5,7 @@ function generateOverviewToDoHtml () {
     console.log("toDo_container");
     return `
     <div class="toDo_container">
-        
+        <p>Test</p>
     </div>
     `;
 }
@@ -23,14 +23,16 @@ function generateToDoCardHtml (title, description) {
     `;
 }
 
-function renderToDoCard () {
-    console.log(myToDos[0].title);
-    let content = document.querySelector('.content_container');
-    content.innerHTML = '';
-    content.innerHTML += generateOverviewToDoHtml();
+function toggleNavContent () {
+    let navContent = document.querySelector('.nav_content');
+    navContent.classList.toggle('d_none');
+}
+
+function renderToDoCard () { 
     let toDoContainer = document.querySelector('.toDo_container');
+    toggleNavContent();
+    toDoContainer.innerHTML = '';
     for (let i = 0; i < myToDos.length; i++) {
-        console.log("for")
         toDoContainer.innerHTML += generateToDoCardHtml(myToDos[i].title, myToDos[i].description);
     }
 }

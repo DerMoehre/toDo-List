@@ -9,4 +9,10 @@ function generateEmptyToDoHtml () {
     `
 }
 
-export { generateEmptyToDoHtml }
+function renderEmptyToDoHtml () {
+    let content = document.querySelector('.toDo_container');
+    content.innerHTML = '';
+    content.innerHTML += generateEmptyToDoHtml();
+}
+
+export { renderEmptyToDoHtml }

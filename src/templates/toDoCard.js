@@ -12,6 +12,13 @@ const myToDos = [
         description: 450,
         dueDate: true,
         priority: 'normal',
+    },
+    {
+        project: 'Duden',
+        title: 'Englisch-Deutsch',
+        description: 450,
+        dueDate: true,
+        priority: 'normal',
     }
 ];
 

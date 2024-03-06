@@ -58,6 +58,22 @@ nav {
     border-radius: 8px;
 }
 
+.middle {
+    padding: 10px 20px;
+}
+
+.nav_content {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    height: 100px;
+}
+
+.d_none {
+    display: none;
+}
+
 .active {
     color: var(--color-background);
     background-color: var(--color-blue); 
@@ -74,7 +90,7 @@ nav {
 
 .content_container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 100%;
 }
 
