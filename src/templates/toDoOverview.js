@@ -1,14 +1,5 @@
 import { myToDos } from "./toDoCard";
-
-
-function generateOverviewToDoHtml () {
-    console.log("toDo_container");
-    return `
-    <div class="toDo_container">
-        <p>Test</p>
-    </div>
-    `;
-}
+import { showToDoInput } from "./modal";
 
 function generateToDoCardHtml (title, description) {
     console.log("toDo Card");
@@ -29,12 +20,16 @@ function toggleNavContent () {
 }
 
 function renderToDoCard () { 
+    if (myToDos.length === 1) {
+        toggleNavContent();
+    }
     let toDoContainer = document.querySelector('.toDo_container');
-    toggleNavContent();
     toDoContainer.innerHTML = '';
     for (let i = 0; i < myToDos.length; i++) {
         toDoContainer.innerHTML += generateToDoCardHtml(myToDos[i].title, myToDos[i].description);
     }
 }
 
-export { renderToDoCard, generateOverviewToDoHtml, generateToDoCardHtml }
+showToDoInput();
+
+export { renderToDoCard, toggleNavContent }

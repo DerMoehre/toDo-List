@@ -2,16 +2,15 @@ import './style.css';
 import './fonts.css';
 
 import { renderEmptyToDoHtml } from './templates/emptyToDo';
-import { renderToDoCard, generateOverviewToDoHtml, generateToDoCardHtml } from './templates/toDoOverview';
-import { myToDos, ToDoCard } from './templates/toDoCard';
-
+import { renderToDoCard, toggleNavContent } from './templates/toDoOverview';
+import { myToDos } from './templates/toDoCard';
 
 
 function main() {
     if (myToDos.length < 1) {
         renderEmptyToDoHtml();
     }else{
-        console.log("Test");
+        toggleNavContent();
         renderToDoCard();
     }
     

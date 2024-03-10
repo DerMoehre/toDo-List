@@ -18,6 +18,35 @@ p {
     color: var(--color-gray);
 }
 
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 20px;
+}
+
+.bg_container {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: var(--color-gray);
+    border-radius: 16px;
+    height: 300px;
+    width: 400px;
+    box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.67);
+}
+
+#input_description {
+    height: 100px;
+}
+
 .title_card, .description_card {
     color: var(--color-background);
 }
