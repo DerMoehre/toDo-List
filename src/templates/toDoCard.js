@@ -1,8 +1,6 @@
-const myToDos = [
+let myToDos = [];
 
-];
-
-localStorage.setItem('data', JSON.stringify(myToDos));
+/* localStorage.setItem('data', JSON.stringify(myToDos)); */
 
 class ToDoCard {
 

@@ -2,7 +2,6 @@ import { myToDos } from "./toDoCard";
 import { showToDoInput } from "./modal";
 
 function generateToDoCardHtml (title, description) {
-    console.log("toDo Card");
     return `
         <div class="toDo_card">
             <div class="top_toDo_card"></div>

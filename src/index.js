@@ -3,11 +3,11 @@ import './fonts.css';
 
 import { renderEmptyToDoHtml } from './templates/emptyToDo';
 import { renderToDoCard, toggleNavContent } from './templates/toDoOverview';
-import { myToDos } from './templates/toDoCard';
+import { myToDos, ToDoCard } from './templates/toDoCard';
 
 
 function main() {
-    if (myToDos.length < 1) {
+    if (JSON.parse(localStorage.getItem('data')) === null) {
         renderEmptyToDoHtml();
     }else{
         toggleNavContent();
