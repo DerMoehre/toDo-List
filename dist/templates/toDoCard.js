@@ -1,1 +1,1 @@
-let myToDos=[];class ToDoCard{constructor(t,o,s,e,a){this.project=t,this.title=o,this.description=s,this.dueDate=e,this.priotity=a}load(){return JSON.parse(localStorage.getItem("data"))}save(t){myToDos.push(t),localStorage.setItem("data",JSON.stringify(myToDos))}}export{myToDos,ToDoCard};
+let myToDos=[];class ToDoCard{constructor(t,o,s,i,e){this.project=t,this.title=o,this.description=s,this.dueDate=i,this.priotity=e}save(t){myToDos.push(t),localStorage.setItem("data",JSON.stringify(myToDos))}}export{myToDos,ToDoCard};

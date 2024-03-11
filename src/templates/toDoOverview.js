@@ -1,4 +1,4 @@
-import { myToDos } from "./toDoCard";
+import { renderEmptyToDoHtml } from "./emptyToDo";
 import { showToDoInput } from "./modal";
 
 function generateToDoCardHtml (title, description) {
@@ -19,16 +19,17 @@ function toggleNavContent () {
 }
 
 function renderToDoCard () { 
-    if (myToDos.length === 1) {
-        toggleNavContent();
-    }
+    let currentToDos = JSON.parse(localStorage.getItem('data'));
     let toDoContainer = document.querySelector('.toDo_container');
     toDoContainer.innerHTML = '';
-    for (let i = 0; i < myToDos.length; i++) {
-        toDoContainer.innerHTML += generateToDoCardHtml(myToDos[i].title, myToDos[i].description);
+    if (currentToDos === null) {
+        renderEmptyToDoHtml();
+    } else {
+        for (let i = 0; i < currentToDos.length; i++) {
+            toDoContainer.innerHTML += generateToDoCardHtml(currentToDos[i].title, currentToDos[i].description);
+        }
     }
+    
 }
-
-showToDoInput();
 
 export { renderToDoCard, toggleNavContent }

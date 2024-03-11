@@ -14,7 +14,19 @@
 
                     <label for="input_description">Description</label>
                     <input type="text" id="input_description" name="input_description">
-
+                <div class="middle_modal">
+                    <div class="todo_details">
+                        <label for="input_date">Date</label>
+                        <input type="date" id="input_date" name="input_date">
+                        <label for="important">Important</label>
+                        <select id="input_selection" name="input_selection">
+                            <option value="">---</option>
+                            <option value="high">high</option>
+                            <option value="middle">middle</option>
+                            <option value="low">low</option>
+                        </select>
+                    </div>
+                </div>  
                 <div class="bottom_modal">
                     <div class="modal_control">
                         <button class="btn_submit" type="submit">Submit</button>
@@ -40,9 +52,9 @@
             </div>
         </div>
         <div class="content_container">
-           <div class="nav_content d_none">
-                <button class="nav_button middle add_item">+ ToDo</button>
-                <button class="nav_button middle">+ Project</button>
+           <div class="nav_content">
+                <button class="nav_button large add_item">+ ToDo</button>
+                <button class="nav_button large">+ Project</button>
            </div>
            <div class="toDo_container">
 
