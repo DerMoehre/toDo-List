@@ -1,1 +1,1 @@
-import"./style.css";import"./fonts.css";import{renderEmptyToDoHtml}from"./templates/emptyToDo";import{renderToDoCard,toggleNavContent}from"./templates/toDoOverview";import{myToDos,ToDoCard}from"./templates/toDoCard";function main(){null===JSON.parse(localStorage.getItem("data"))?renderEmptyToDoHtml():(toggleNavContent(),renderToDoCard())}main();
+import"./style.css";import"./fonts.css";import{renderToDoCard,toggleNavContent}from"./templates/toDoOverview";function main(){renderToDoCard()}main();

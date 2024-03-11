@@ -43,8 +43,16 @@ fieldset {
     box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.67);
 }
 
+.middle_modal {
+    padding: 10px 0px;
+}
+
 #input_description {
     height: 100px;
+}
+
+.title {
+    text-align: center;
 }
 
 .title_card, .description_card {
@@ -129,6 +137,8 @@ nav {
     align-items: stretch;
     justify-content: center;
     gap: 16px;
+    font-size: 36px;
+    color: var(--color-gray);
 }
 
 .toDo_container {
