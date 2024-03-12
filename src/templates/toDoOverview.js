@@ -17,6 +17,12 @@ function toggleActive (checkbox, index, currentToDos) {
     }
 }
 
+function deleteToDo (index, currentToDos) {
+    currentToDos.splice(index, 1);
+    localStorage.setItem('data', JSON.stringify(currentToDos));
+    renderToDoCard();
+}
+
 function renderToDoCard () { 
     let currentToDos = JSON.parse(localStorage.getItem('data'));
     let toDoContainer = document.querySelector('.toDo_container');
@@ -33,6 +39,12 @@ function renderToDoCard () {
                 toggleActive(checkbox, index, currentToDos);
             });
         });
+        let trashCans = document.querySelectorAll('.trash_icon');
+        trashCans.forEach((trashCan, index) => {
+            trashCan.addEventListener('click', () => {
+                deleteToDo(index, currentToDos);
+            });
+        });
     }
 }
 
@@ -46,6 +58,9 @@ function generateToDoCardHtml (index, title, description, dueDate, important, st
                 </div>
                 <p class="title_card">${title}</p>
                 <p class="description_card">${description}</p>
+                <div class="bottom_toDo_card">
+                    <img class="trash_icon" src="./assets/trash.svg" alt="trash">
+                </div>
             </div>
         </div>
     `;
