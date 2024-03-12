@@ -22,4 +22,22 @@ The following technologies were used in this project:
 
 ## Project Overview
 
+![alt text](overview.png)
 
+### Functionality
+
+<p>When you click on the +ToDo button, a modal is triggered, where you can insert the toDo data </p>
+
+![alt text](modal.png)
+
+<p>If you choose a priority for the toDo, the color schema will change accordingly</p>
+
+![alt text](priority.png)
+
+<p>You can also set a dueDate and it will show on the card</p>
+
+![alt text](dueDate.png)
+
+<p>By clicking on the checkbox, the card will be marked as completed</p>
+
+![alt text](complete.png)
