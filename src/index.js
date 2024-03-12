@@ -1,7 +1,7 @@
 import './style.css';
 import './fonts.css';
 
-import { renderToDoCard, toggleNavContent } from './templates/toDoOverview';
+import { renderToDoCard } from './templates/toDoOverview';
 
 
 function main() {
