@@ -23,7 +23,7 @@ function closeModal () {
 function submit () {
     let submit = document.querySelector('.btn_submit');
     submit.addEventListener('click', () => {
-        const toDo = new ToDoCard('', document.getElementById('input_title').value, document.getElementById('input_description').value, '','');
+        const toDo = new ToDoCard('', document.getElementById('input_title').value, document.getElementById('input_description').value, document.getElementById('input_date').value, document.getElementById('input_selection').value);
         toDo.save(toDo);
         toggleModal();
         clearModalInput();
